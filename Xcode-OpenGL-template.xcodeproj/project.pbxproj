@@ -8,23 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		3431ED541F384B4B0040792A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3431ED531F384B4B0040792A /* main.cpp */; };
+		3431ED5C1F384B6B0040792A /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3431ED5B1F384B6B0040792A /* OpenGL.framework */; };
+		3431ED5E1F384B7A0040792A /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3431ED5D1F384B7A0040792A /* libGLEW.2.0.0.dylib */; };
+		3431ED601F384B850040792A /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3431ED5F1F384B850040792A /* libglfw.3.2.dylib */; };
+		3431ED621F384F230040792A /* shaders in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3431ED611F384F230040792A /* shaders */; };
+		3431ED681F384F590040792A /* gl_framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3431ED631F384F590040792A /* gl_framework.cpp */; };
+		3431ED691F384F590040792A /* shader_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3431ED651F384F590040792A /* shader_util.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		3431ED4E1F384B4B0040792A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				3431ED621F384F230040792A /* shaders in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3431ED501F384B4B0040792A /* Xcode-OpenGL-template */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Xcode-OpenGL-template"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3431ED531F384B4B0040792A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3431ED5B1F384B6B0040792A /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		3431ED5D1F384B7A0040792A /* libGLEW.2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.0.0.dylib; path = ../../../../../../usr/local/Cellar/glew/2.0.0/lib/libGLEW.2.0.0.dylib; sourceTree = "<group>"; };
+		3431ED5F1F384B850040792A /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
+		3431ED611F384F230040792A /* shaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = shaders; path = "Xcode-OpenGL-template/shaders"; sourceTree = "<group>"; };
+		3431ED631F384F590040792A /* gl_framework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gl_framework.cpp; sourceTree = "<group>"; };
+		3431ED641F384F590040792A /* gl_framework.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = gl_framework.hpp; sourceTree = "<group>"; };
+		3431ED651F384F590040792A /* shader_util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shader_util.cpp; sourceTree = "<group>"; };
+		3431ED661F384F590040792A /* shader_util.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = shader_util.hpp; sourceTree = "<group>"; };
+		3431ED671F384F590040792A /* glm */ = {isa = PBXFileReference; lastKnownFileType = folder; path = glm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +48,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3431ED601F384B850040792A /* libglfw.3.2.dylib in Frameworks */,
+				3431ED5E1F384B7A0040792A /* libGLEW.2.0.0.dylib in Frameworks */,
+				3431ED5C1F384B6B0040792A /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +60,10 @@
 		3431ED471F384B4B0040792A = {
 			isa = PBXGroup;
 			children = (
+				3431ED611F384F230040792A /* shaders */,
 				3431ED521F384B4B0040792A /* Xcode-OpenGL-template */,
 				3431ED511F384B4B0040792A /* Products */,
+				3431ED5A1F384B6B0040792A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +78,24 @@
 		3431ED521F384B4B0040792A /* Xcode-OpenGL-template */ = {
 			isa = PBXGroup;
 			children = (
+				3431ED631F384F590040792A /* gl_framework.cpp */,
+				3431ED641F384F590040792A /* gl_framework.hpp */,
+				3431ED651F384F590040792A /* shader_util.cpp */,
+				3431ED661F384F590040792A /* shader_util.hpp */,
+				3431ED671F384F590040792A /* glm */,
 				3431ED531F384B4B0040792A /* main.cpp */,
 			);
 			path = "Xcode-OpenGL-template";
+			sourceTree = "<group>";
+		};
+		3431ED5A1F384B6B0040792A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3431ED5F1F384B850040792A /* libglfw.3.2.dylib */,
+				3431ED5D1F384B7A0040792A /* libGLEW.2.0.0.dylib */,
+				3431ED5B1F384B6B0040792A /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +156,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3431ED541F384B4B0040792A /* main.cpp in Sources */,
+				3431ED691F384F590040792A /* shader_util.cpp in Sources */,
+				3431ED681F384F590040792A /* gl_framework.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +204,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -207,6 +246,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
@@ -216,6 +256,12 @@
 		3431ED581F384B4B0040792A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glew/2.0.0/lib,
+					/usr/local/Cellar/glfw/3.2.1/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -223,6 +269,12 @@
 		3431ED591F384B4B0040792A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glew/2.0.0/lib,
+					/usr/local/Cellar/glfw/3.2.1/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
